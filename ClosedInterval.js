@@ -1,4 +1,4 @@
-export class Range {
+export class ClosedInterval {
   constructor(num1, num2) {
     if (num1 > num2) {
       this.upperPoint = num1;
@@ -9,7 +9,7 @@ export class Range {
     }
   }
 
-  has(num) {
+  include(num) {
     if (this.lowerPoint <= num && num <= this.upperPoint) {
       return true;
     } else {
@@ -17,7 +17,7 @@ export class Range {
     }
   }
 
-  print() {
+  toString() {
     return `[${this.lowerPoint},${this.upperPoint}]`;
   }
 }
