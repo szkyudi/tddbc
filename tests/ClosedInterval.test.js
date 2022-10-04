@@ -67,8 +67,8 @@ describe("整数閉区間を示す ClosedInterval クラスのテスト", () => 
         const ci = new ClosedInterval(lowerPoint, upperPoint);
         expect(ci.include(num)).toBe(expected);
     });
-    test("少数を渡した場合でも整数と同様に動作すること", () => {
-      const ci = new ClosedInterval(lowerPoint, upperPoint);
+    test("小数を渡した場合でも整数と同様に動作すること", () => {
+      const ci = new ClosedInterval(3, 7);
       expect(ci.include(3.7)).toBe(true);
     })
   });
