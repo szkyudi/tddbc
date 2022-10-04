@@ -1,0 +1,13 @@
+{
+  "name": "tddbc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest --ui"
+  },
+  "devDependencies": {
+    "@vitest/ui": "^0.23.4",
+    "vitest": "^0.23.4"
+  }
+}
