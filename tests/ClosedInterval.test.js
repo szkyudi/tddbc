@@ -55,7 +55,7 @@ describe("整数閉区間を示す ClosedInterval クラスのテスト", () => 
     });
   });
   
-  describe("include()メソッドに任意の値を引数として渡して実行するとその引数が整数閉区間に含まれているかどうかを真偽値で返すこと", () => {
+  describe("includes()メソッドに任意の値を引数として渡して実行するとその引数が整数閉区間に含まれているかどうかを真偽値で返すこと", () => {
     const lowerPoint = 3;
     const upperPoint = 7;
     test.each([
@@ -65,11 +65,11 @@ describe("整数閉区間を示す ClosedInterval クラスのテスト", () => 
       { description: "上限の境界値よりひとつ大きい整数", num: upperPoint + 1, expected: false },
     ])("$descriptionを渡すと$expectedが返されること", ({ num, expected }) => {
         const ci = new ClosedInterval(lowerPoint, upperPoint);
-        expect(ci.include(num)).toBe(expected);
+        expect(ci.includes(num)).toBe(expected);
     });
     test("小数を渡した場合でも整数と同様に動作すること", () => {
       const ci = new ClosedInterval(3, 7);
-      expect(ci.include(3.7)).toBe(true);
+      expect(ci.includes(3.7)).toBe(true);
     })
   });
 })

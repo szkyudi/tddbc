@@ -9,7 +9,7 @@ export class ClosedInterval {
     }
   }
 
-  include(num) {
+  includes(num) {
     if (this.lowerPoint <= num && num <= this.upperPoint) {
       return true;
     } else {
